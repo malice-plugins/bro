@@ -3,7 +3,6 @@ FROM blacktop/bro
 LABEL maintainer "https://github.com/blacktop"
 
 COPY . /go/src/github.com/maliceio/malice-bro
-RUN apk --update add --no-cache bro bro-libunrar ca-certificates
 RUN apk --update add --no-cache -t .build-deps \
                     build-base \
                     mercurial \
