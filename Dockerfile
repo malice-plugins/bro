@@ -2,8 +2,7 @@ FROM blacktop/bro
 
 LABEL maintainer "https://github.com/blacktop"
 
-RUN apk --update add --no-cache tini su-exec
-RUN set -x \
+RUN apk --update add --no-cache tini su-exec \
   && echo "===> Add malice user and malware folder..." \
   && addgroup malice \
   && adduser -S -G malice malice \
