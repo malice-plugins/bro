@@ -6,7 +6,6 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/maliceio/go-plugin-utils/utils"
 	"github.com/urfave/cli"
 )
 
@@ -27,7 +26,7 @@ func main() {
 
 	var elastic string
 
-	cli.AppHelpTemplate = utils.AppHelpTemplate
+	// cli.AppHelpTemplate = utils.AppHelpTemplate
 	app := cli.NewApp()
 
 	app.Name = "bro"
@@ -84,5 +83,7 @@ func main() {
 	}
 
 	err := app.Run(os.Args)
-	utils.Assert(err)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
