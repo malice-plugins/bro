@@ -7,7 +7,7 @@ malice-bro
 
 ### Dependencies
 
--	[malice/alpine](https://hub.docker.com/r/malice/alpine/)
+-	[blacktop/bro](https://hub.docker.com/r/blacktop/bro/)
 
 ### Installation
 
