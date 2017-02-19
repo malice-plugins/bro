@@ -15,8 +15,7 @@ tags:
 
 test:
 	docker run --rm $(REPO)/$(NAME):$(VERSION) --help
-	wget https://github.com/maliceio/malice-bro/raw/master/test/test.pcap
-	docker run --rm -v `pwd`:/malware $(REPO)/$(NAME):$(VERSION) -V test.pcap > results.json
+	docker run --rm -v `pwd`/test:/malware $(REPO)/$(NAME):$(VERSION) -V -r my.pcap > results.json
 	cat results.json | jq .
 	cat results.json | jq -r .$(NAME).markdown
 

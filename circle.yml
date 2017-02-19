@@ -15,8 +15,9 @@ dependencies:
 test:
   override:
     - docker images malice_bro
-    - docker run malice_bro -V EICAR | jq .
-    - docker run malice_bro -V EICAR | jq -r .bro.markdown
+    - wget https://raw.githubusercontent.com/maliceio/malice-bro/master/test/my.pcap
+    - docker run -v `pwd`:/malware malice_bro -V my.pcap | jq .
+    - docker run -v `pwd`:/malware malice_bro -V my.pcap | jq -r .bro.markdown
 
 deployment:
   # master:
