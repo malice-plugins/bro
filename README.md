@@ -1,7 +1,7 @@
 malice-bro (WIP)
 ================
 
-[![Circle CI](https://circleci.com/gh/maliceio/malice-bro.png?style=shield)](https://circleci.com/gh/maliceio/malice-bro) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/malice/bro.svg)](https://hub.docker.com/r/malice/bro/) [![Docker Pulls](https://img.shields.io/docker/pulls/malice/bro.svg)](https://hub.docker.com/r/malice/bro/) [![Docker Image](https://img.shields.io/badge/docker image-171 MB-blue.svg)](https://hub.docker.com/r/malice/bro/)
+[![Circle CI](https://circleci.com/gh/maliceio/malice-bro.png?style=shield)](https://circleci.com/gh/maliceio/malice-bro) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/malice/bro.svg)](https://hub.docker.com/r/malice/bro/) [![Docker Pulls](https://img.shields.io/docker/pulls/malice/bro.svg)](https://hub.docker.com/r/malice/bro/) [![Docker Image](https://img.shields.io/badge/docker image-27 MB-blue.svg)](https://hub.docker.com/r/malice/bro/)
 
 **Malice Bro Plugin** - Scan PCAP or bind to interface and scan files off the wire.
 
