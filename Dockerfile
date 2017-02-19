@@ -4,7 +4,7 @@ LABEL maintainer "https://github.com/blacktop"
 
 RUN apk --update add --no-cache tini su-exec
 RUN set -x \
-  && echo "Add malice user and malware folder..." \
+  && echo "===> Add malice user and malware folder..." \
   && addgroup malice \
   && adduser -S -G malice malice \
   && mkdir /malware \
@@ -21,7 +21,7 @@ RUN apk --update add --no-cache -t .build-deps \
                     git \
                     gcc \
                     go \
-  && echo "Building bro-scan Go binary..." \
+  && echo "===> Building bro-scan Go binary..." \
   && cd /go/src/github.com/maliceio/malice-bro \
   && export GOPATH=/go \
   && go version \
