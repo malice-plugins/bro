@@ -2,6 +2,14 @@ FROM blacktop/bro
 
 LABEL maintainer "https://github.com/blacktop"
 
+RUN apk --update add --no-cache tini su-exec
+RUN set -x \
+  && echo "Add malice user and malware folder..." \
+  && addgroup malice \
+  && adduser -S -G malice malice \
+  && mkdir /malware \
+  && chown -R malice:malice /malware
+
 COPY . /go/src/github.com/maliceio/malice-bro
 RUN apk --update add --no-cache -t .build-deps \
                     build-base \
